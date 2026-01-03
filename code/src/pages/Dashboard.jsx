@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { AuthContext } from '../context/AuthContext';
 
-const Dashboard = () => {
-  return (
-    <div>Dashboard</div>
-  )
+function Dashboard(){
+    const [data, setData] = useState([]);
+    const {logout} = useContext(AuthContext);
+
+    useEffect(()=>{
+        axios
+    })
+
+
+
+
 }
 
 export default Dashboard

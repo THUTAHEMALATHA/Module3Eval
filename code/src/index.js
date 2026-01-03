@@ -1,9 +1,15 @@
-import React from 'react'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import { AuthContextProvider } from './context/AuthContext';
+import App from './App';
 
-const index = () => {
-  return (
-    <div>index</div>
-  )
-}
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-export default index
+root.render(
+    <AuthContextProvider>
+        <BrowserRouter>
+        <App />
+        </BrowserRouter>
+    </AuthContextProvider>
+);
